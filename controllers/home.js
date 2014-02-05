@@ -5,13 +5,13 @@ var path            = require('path');
 var emailTemplates  = require('swig-email-templates');
 var nodemailer      = require("nodemailer");
 
-var smtpTransport = nodemailer.createTransport("SMTP",{
-   service: "Gmail",
-   auth: {
-       user: "dan.stroot@gmail.com",
-       pass: "1lov32#U"
-   }
-});
+// var smtpTransport = nodemailer.createTransport("SMTP",{
+//    service: "Gmail",
+//    auth: {
+//        user: "dan.stroot@gmail.com",
+//        pass: "111222333"
+//    }
+// });
 
 module.exports.controller = function(app) {
 
@@ -48,13 +48,13 @@ module.exports.controller = function(app) {
            html:    html                           // HTML body
         };
 
-        smtpTransport.sendMail(message, function(error, response){
-           if(error){
-               console.log(error);
-           }else{
-               console.log("Message sent: " + response.message);
-           }
-        });
+        // smtpTransport.sendMail(message, function(error, response){
+        //    if(error){
+        //        console.log(error);
+        //    }else{
+        //        console.log("Message sent: " + response.message);
+        //    }
+        // });
 
       });
     });
